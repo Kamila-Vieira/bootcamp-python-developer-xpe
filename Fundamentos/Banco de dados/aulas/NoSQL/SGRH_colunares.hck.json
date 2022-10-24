@@ -1,0 +1,1140 @@
+{
+    "modelName": "SGRH_colunares",
+    "collections": [
+        {
+            "collectionName": "empregados",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "empregado_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "d3762a57-13c2-4750-b4f2-38bcff34da2b",
+                    "error": {},
+                    "childRelationships": [
+                        "90678a51-6077-4578-956e-42d5378dc59e",
+                        "0c28bbe9-9853-4727-8486-10f587c39bcb"
+                    ]
+                },
+                {
+                    "name": "departamento_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "85805ea1-6a77-44bf-a258-a3d55d8603b5",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "b5851639-feb1-46ab-98e3-1f47df2de117",
+                    "foreignField": [
+                        "b5851639-feb1-46ab-98e3-1f47df2de117",
+                        "200d917d-3909-49ed-9814-0b057e4d8890"
+                    ],
+                    "parentRelationship": "3077862a-dda9-44dc-8fcd-f3f33eed71bc"
+                },
+                {
+                    "name": "cargo_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "10c44e07-e34e-40a4-8724-77c8a88f1e26",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "8e13549b-5e74-417d-88c1-fe898afec854",
+                    "foreignField": [
+                        "8e13549b-5e74-417d-88c1-fe898afec854",
+                        "2bfb47f6-3f00-43a6-a2cd-8cef6e7d7f1b"
+                    ],
+                    "parentRelationship": "ebcefc1b-1a4c-4520-b484-8f8273f0f8b5"
+                },
+                {
+                    "name": "gerente_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "c833cddd-51f3-4bbb-81bf-a11e54e6f6c2",
+                    "foreignCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "foreignField": [
+                        "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                        "d3762a57-13c2-4750-b4f2-38bcff34da2b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "90678a51-6077-4578-956e-42d5378dc59e",
+                    "error": {}
+                },
+                {
+                    "name": "dados_pessoais",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "properties": [
+                        {
+                            "name": "primeiro_nome",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "mode": "text",
+                            "subtype": "string",
+                            "childType": "char",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "d6b6a575-ed26-4a83-ac12-404abf87116e",
+                            "error": {}
+                        },
+                        {
+                            "name": "ultimo_nome",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "mode": "text",
+                            "subtype": "string",
+                            "childType": "char",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "ed6325e3-d287-492e-85d2-9c49eecf5444",
+                            "error": {}
+                        }
+                    ],
+                    "frozen": true,
+                    "additionalProperties": false,
+                    "childType": "udt",
+                    "type": "document",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "762e6710-a660-4668-8103-f225bd29a2bf",
+                    "error": {}
+                },
+                {
+                    "name": "dados_corporativos",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "properties": [
+                        {
+                            "name": "email",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "mode": "text",
+                            "subtype": "string",
+                            "childType": "char",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "9684565b-9c5b-45be-b421-fc7eaa0cdb35",
+                            "error": {}
+                        },
+                        {
+                            "name": "salario",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "exclusiveMinimum": false,
+                            "exclusiveMaximum": false,
+                            "primaryKey": false,
+                            "mode": "integer",
+                            "childType": "numeric",
+                            "type": "numeric",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "260b5a4e-faa0-4772-a36e-cbceaaa8c055",
+                            "error": {}
+                        },
+                        {
+                            "name": "data_admissao",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "childType": "date",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "4dac5113-5238-4c38-a7a0-b55a30867a9e",
+                            "error": {}
+                        }
+                    ],
+                    "frozen": true,
+                    "additionalProperties": false,
+                    "childType": "udt",
+                    "type": "document",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "da20c551-a4a4-47ac-8743-766382035f3d",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "ada265fc-a565-42a0-b41b-5e336c2d26eb"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        },
+        {
+            "collectionName": "departamentos",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "departamento_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "200d917d-3909-49ed-9814-0b057e4d8890",
+                    "error": {},
+                    "childRelationships": [
+                        "3077862a-dda9-44dc-8fcd-f3f33eed71bc"
+                    ]
+                },
+                {
+                    "name": "departamento_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "text",
+                    "subtype": "string",
+                    "childType": "char",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "5d680c72-b611-4de7-a51c-348d4e36c767",
+                    "error": {}
+                },
+                {
+                    "name": "localidade_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "a1a834c8-741f-4124-a8a1-38e3090b9df1",
+                    "foreignCollection": "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+                    "foreignField": [
+                        "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+                        "4ccba263-b54e-4e75-9d64-9ae5835edee7"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c9014d2a-7bc1-444c-b319-df63084ff939",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "ce398f32-4c1f-4056-93ee-bcb94a9a910b"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "b5851639-feb1-46ab-98e3-1f47df2de117",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        },
+        {
+            "collectionName": "localidades",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "localidade_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "4ccba263-b54e-4e75-9d64-9ae5835edee7",
+                    "error": {},
+                    "childRelationships": [
+                        "c9014d2a-7bc1-444c-b319-df63084ff939"
+                    ]
+                },
+                {
+                    "name": "pais_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "56d67a4e-3e17-4075-a06e-01d7aca9983a",
+                    "foreignCollection": "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+                    "foreignField": [
+                        "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+                        "4dda9f9c-89a1-49e6-a940-4f03a30637ab"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "908713cc-3763-4725-9621-681e9ba6a983",
+                    "error": {}
+                },
+                {
+                    "name": "endereco",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "properties": [
+                        {
+                            "name": "logradouro",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "mode": "text",
+                            "subtype": "string",
+                            "childType": "char",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "b334d0d0-7da5-41ff-8096-900a9441a0c2",
+                            "error": {}
+                        },
+                        {
+                            "name": "cidade",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "mode": "text",
+                            "subtype": "string",
+                            "childType": "char",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "f40300a6-9262-4bae-80f6-22616268ae55",
+                            "error": {}
+                        },
+                        {
+                            "name": "estado",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "primaryKey": false,
+                            "mode": "text",
+                            "subtype": "string",
+                            "childType": "char",
+                            "type": "string",
+                            "compositeKey": [
+                                "compositePartitionKey",
+                                "compositeClusteringKey"
+                            ],
+                            "compositePartitionKey": false,
+                            "compositeClusteringKey": false,
+                            "GUID": "dad55e13-a385-4313-9d33-6e0e5890614b",
+                            "error": {}
+                        }
+                    ],
+                    "frozen": true,
+                    "additionalProperties": false,
+                    "childType": "udt",
+                    "type": "document",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "688bf5f7-2c86-4a28-95a5-24046b267316",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "5b64d31b-cecd-4976-9e22-32223e8d4400"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        },
+        {
+            "collectionName": "paises",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "pais_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "4dda9f9c-89a1-49e6-a940-4f03a30637ab",
+                    "error": {},
+                    "childRelationships": [
+                        "908713cc-3763-4725-9621-681e9ba6a983"
+                    ]
+                },
+                {
+                    "name": "pais_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "text",
+                    "subtype": "string",
+                    "childType": "char",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "38d9ae7a-0a96-4141-a35a-44d82f3a2e45",
+                    "error": {}
+                },
+                {
+                    "name": "regiao_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "096870f4-1c65-4bcc-baf4-d24a6eccd8c4",
+                    "foreignCollection": "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+                    "foreignField": [
+                        "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+                        "26a795d4-585f-4b80-bfc7-c15f665f7638"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "4d2cd009-5acf-4b13-9078-1d5de4e452de",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "7a1e041d-5984-4152-b735-598b869d75c8"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        },
+        {
+            "collectionName": "regioes",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "regiao_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "26a795d4-585f-4b80-bfc7-c15f665f7638",
+                    "error": {},
+                    "childRelationships": [
+                        "4d2cd009-5acf-4b13-9078-1d5de4e452de"
+                    ]
+                },
+                {
+                    "name": "regiao_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "text",
+                    "subtype": "string",
+                    "childType": "char",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "ed387f48-75fb-4268-ad8c-9878439fc9f1",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "9594eab2-fe1c-4cad-abcb-91e4224b40f3"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        },
+        {
+            "collectionName": "cargos",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "cargo_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "2bfb47f6-3f00-43a6-a2cd-8cef6e7d7f1b",
+                    "error": {},
+                    "childRelationships": [
+                        "ebcefc1b-1a4c-4520-b484-8f8273f0f8b5",
+                        "fa2b65da-955b-4925-aac2-2504f2ddaa63"
+                    ]
+                },
+                {
+                    "name": "cargo_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "text",
+                    "subtype": "string",
+                    "childType": "char",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "4c511016-92bf-4deb-9303-9e5f7943e470",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "06d41de1-adc2-4460-ae6f-9d9943a3ec15"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "8e13549b-5e74-417d-88c1-fe898afec854",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        },
+        {
+            "collectionName": "cargo_historico",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "cargo_historico_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "ecca1e17-ab10-4f79-8610-96198f2376c7",
+                    "error": {}
+                },
+                {
+                    "name": "data_inicio",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "date",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "252ba258-a2fc-4f06-a22b-27343b20bbcd",
+                    "error": {}
+                },
+                {
+                    "name": "data_fim",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "date",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "0079a336-9ef9-4b08-9325-a36a4564ba40",
+                    "error": {}
+                },
+                {
+                    "name": "cargo_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "f33aaefa-a205-4f37-b328-f9645b64c72b",
+                    "foreignCollection": "8e13549b-5e74-417d-88c1-fe898afec854",
+                    "foreignField": [
+                        "8e13549b-5e74-417d-88c1-fe898afec854",
+                        "2bfb47f6-3f00-43a6-a2cd-8cef6e7d7f1b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "fa2b65da-955b-4925-aac2-2504f2ddaa63",
+                    "error": {}
+                },
+                {
+                    "name": "empregado_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "childType": "uuid",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "GUID": "7f81002e-f058-461a-a168-72c128bac6df",
+                    "foreignCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "foreignField": [
+                        "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                        "d3762a57-13c2-4750-b4f2-38bcff34da2b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "0c28bbe9-9853-4727-8486-10f587c39bcb",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "eca99a92-23d8-4a14-8ecf-4a2f50ddd96d"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "tableIfNotExist": false,
+            "searchIndexIfNotExist": false,
+            "GUID": "1203c95e-9089-4275-922a-e473e9783bd5",
+            "bucketId": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "recursos_humanos",
+            "type": "bucket",
+            "collectionIds": [
+                "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                "b5851639-feb1-46ab-98e3-1f47df2de117",
+                "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+                "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+                "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+                "8e13549b-5e74-417d-88c1-fe898afec854",
+                "1203c95e-9089-4275-922a-e473e9783bd5"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "indexes": [],
+            "replStrategy": "SimpleStrategy",
+            "addToCqlScript": true,
+            "keyspaceIfNotExist": false,
+            "GUID": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk empregados.departamento_id to departamentos.departamento_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "b5851639-feb1-46ab-98e3-1f47df2de117",
+                    "200d917d-3909-49ed-9814-0b057e4d8890"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "85805ea1-6a77-44bf-a258-a3d55d8603b5"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "b5851639-feb1-46ab-98e3-1f47df2de117",
+            "childCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+            "GUID": "3077862a-dda9-44dc-8fcd-f3f33eed71bc"
+        },
+        {
+            "name": "fk empregados.cargo_id to cargos.cargo_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "8e13549b-5e74-417d-88c1-fe898afec854",
+                    "2bfb47f6-3f00-43a6-a2cd-8cef6e7d7f1b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "10c44e07-e34e-40a4-8724-77c8a88f1e26"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "8e13549b-5e74-417d-88c1-fe898afec854",
+            "childCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+            "GUID": "ebcefc1b-1a4c-4520-b484-8f8273f0f8b5"
+        },
+        {
+            "name": "fk empregados.gerente_id to empregados.empregado_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "d3762a57-13c2-4750-b4f2-38bcff34da2b"
+                ]
+            ],
+            "parentCardinality": "0..n",
+            "childField": [
+                [
+                    "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "c833cddd-51f3-4bbb-81bf-a11e54e6f6c2"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "90678a51-6077-4578-956e-42d5378dc59e",
+            "parentCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+            "childCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839"
+        },
+        {
+            "name": "fk departamentos.localidade_id to localidades.localidade_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+                    "4ccba263-b54e-4e75-9d64-9ae5835edee7"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "b5851639-feb1-46ab-98e3-1f47df2de117",
+                    "a1a834c8-741f-4124-a8a1-38e3090b9df1"
+                ]
+            ],
+            "childCardinality": "1..n",
+            "GUID": "c9014d2a-7bc1-444c-b319-df63084ff939",
+            "parentCollection": "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+            "childCollection": "b5851639-feb1-46ab-98e3-1f47df2de117"
+        },
+        {
+            "name": "fk localidades.pais_id to paises.pais_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+                    "4dda9f9c-89a1-49e6-a940-4f03a30637ab"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+                    "56d67a4e-3e17-4075-a06e-01d7aca9983a"
+                ]
+            ],
+            "childCardinality": "1..n",
+            "GUID": "908713cc-3763-4725-9621-681e9ba6a983",
+            "parentCollection": "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+            "childCollection": "aa726fcf-e360-4171-ac97-c83c8dc30b7b"
+        },
+        {
+            "name": "fk paises.regiao_id to regioes.regiao_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+                    "26a795d4-585f-4b80-bfc7-c15f665f7638"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+                    "096870f4-1c65-4bcc-baf4-d24a6eccd8c4"
+                ]
+            ],
+            "childCardinality": "1..n",
+            "GUID": "4d2cd009-5acf-4b13-9078-1d5de4e452de",
+            "parentCollection": "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+            "childCollection": "44dc1400-7702-470a-b0fc-b14ae1afdb42"
+        },
+        {
+            "name": "fk cargo_historico.cargo_id to cargos.cargo_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "8e13549b-5e74-417d-88c1-fe898afec854",
+                    "2bfb47f6-3f00-43a6-a2cd-8cef6e7d7f1b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "1203c95e-9089-4275-922a-e473e9783bd5",
+                    "f33aaefa-a205-4f37-b328-f9645b64c72b"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "fa2b65da-955b-4925-aac2-2504f2ddaa63",
+            "parentCollection": "8e13549b-5e74-417d-88c1-fe898afec854",
+            "childCollection": "1203c95e-9089-4275-922a-e473e9783bd5"
+        },
+        {
+            "name": "fk cargo_historico.empregado_id to empregados.empregado_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                    "d3762a57-13c2-4750-b4f2-38bcff34da2b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "1203c95e-9089-4275-922a-e473e9783bd5",
+                    "7f81002e-f058-461a-a168-72c128bac6df"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "0c28bbe9-9853-4727-8486-10f587c39bcb",
+            "parentCollection": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+            "childCollection": "1203c95e-9089-4275-922a-e473e9783bd5"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f": "recursos_humanos",
+        "d98698d7-5668-4564-9ab7-0820c2fe7839": "empregados",
+        "d3762a57-13c2-4750-b4f2-38bcff34da2b": "empregado_id",
+        "b5851639-feb1-46ab-98e3-1f47df2de117": "departamentos",
+        "aa726fcf-e360-4171-ac97-c83c8dc30b7b": "localidades",
+        "4ccba263-b54e-4e75-9d64-9ae5835edee7": "localidade_id",
+        "44dc1400-7702-470a-b0fc-b14ae1afdb42": "paises",
+        "4dda9f9c-89a1-49e6-a940-4f03a30637ab": "pais_id",
+        "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7": "regioes",
+        "26a795d4-585f-4b80-bfc7-c15f665f7638": "regiao_id",
+        "8e13549b-5e74-417d-88c1-fe898afec854": "cargos",
+        "1203c95e-9089-4275-922a-e473e9783bd5": "cargo_historico",
+        "ecca1e17-ab10-4f79-8610-96198f2376c7": "cargo_historico_id",
+        "2bfb47f6-3f00-43a6-a2cd-8cef6e7d7f1b": "cargo_id",
+        "5d680c72-b611-4de7-a51c-348d4e36c767": "departamento_nome",
+        "38d9ae7a-0a96-4141-a35a-44d82f3a2e45": "pais_nome",
+        "ed387f48-75fb-4268-ad8c-9878439fc9f1": "regiao_nome",
+        "0079a336-9ef9-4b08-9325-a36a4564ba40": "data_fim",
+        "252ba258-a2fc-4f06-a22b-27343b20bbcd": "data_inicio",
+        "85805ea1-6a77-44bf-a258-a3d55d8603b5": "departamento_id",
+        "10c44e07-e34e-40a4-8724-77c8a88f1e26": "cargo_id",
+        "200d917d-3909-49ed-9814-0b057e4d8890": "departamento_id",
+        "3077862a-dda9-44dc-8fcd-f3f33eed71bc": "fk empregados.departamento_id to departamentos.departamento_id",
+        "ebcefc1b-1a4c-4520-b484-8f8273f0f8b5": "fk empregados.cargo_id to cargos.cargo_id",
+        "f33aaefa-a205-4f37-b328-f9645b64c72b": "cargo_id",
+        "c833cddd-51f3-4bbb-81bf-a11e54e6f6c2": "gerente_id",
+        "90678a51-6077-4578-956e-42d5378dc59e": "fk empregados.gerente_id to empregados.empregado_id",
+        "a1a834c8-741f-4124-a8a1-38e3090b9df1": "localidade_id",
+        "c9014d2a-7bc1-444c-b319-df63084ff939": "fk departamentos.localidade_id to localidades.localidade_id",
+        "56d67a4e-3e17-4075-a06e-01d7aca9983a": "pais_id",
+        "908713cc-3763-4725-9621-681e9ba6a983": "fk localidades.pais_id to paises.pais_id",
+        "096870f4-1c65-4bcc-baf4-d24a6eccd8c4": "regiao_id",
+        "4d2cd009-5acf-4b13-9078-1d5de4e452de": "fk paises.regiao_id to regioes.regiao_id",
+        "4c511016-92bf-4deb-9303-9e5f7943e470": "cargo_nome",
+        "fa2b65da-955b-4925-aac2-2504f2ddaa63": "fk cargo_historico.cargo_id to cargos.cargo_id",
+        "7f81002e-f058-461a-a168-72c128bac6df": "empregado_id",
+        "0c28bbe9-9853-4727-8486-10f587c39bcb": "fk cargo_historico.empregado_id to empregados.empregado_id",
+        "762e6710-a660-4668-8103-f225bd29a2bf": "dados_pessoais",
+        "d6b6a575-ed26-4a83-ac12-404abf87116e": "primeiro_nome",
+        "ed6325e3-d287-492e-85d2-9c49eecf5444": "ultimo_nome",
+        "da20c551-a4a4-47ac-8743-766382035f3d": "dados_corporativos",
+        "9684565b-9c5b-45be-b421-fc7eaa0cdb35": "email",
+        "260b5a4e-faa0-4772-a36e-cbceaaa8c055": "salario",
+        "4dac5113-5238-4c38-a7a0-b55a30867a9e": "data_admissao",
+        "688bf5f7-2c86-4a28-95a5-24046b267316": "endereco",
+        "b334d0d0-7da5-41ff-8096-900a9441a0c2": "logradouro",
+        "f40300a6-9262-4bae-80f6-22616268ae55": "cidade",
+        "dad55e13-a385-4313-9d33-6e0e5890614b": "estado"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "5d353131-b2e1-435d-8893-175dca853e4a"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "226acadd-c2c4-4c73-9a07-5e47ed75f45e"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "3d3414fe-e2b2-45e4-a7fb-af142b9cb942"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "3.x",
+    "dbVendor": "Cassandra",
+    "appTarget": "CASSANDRA",
+    "creationTS": "2022-10-22T01:02:00.035Z",
+    "GUID": "36fb4b34-7763-4f78-8b1f-2faa0dc92fa3",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "lastModifTS": "2022-10-22T01:37:29.406Z",
+    "persistenceSchemaVersion": "6",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginName": "Cassandra",
+        "pluginVersion": "0.1.113",
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "6.6.0"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "d98698d7-5668-4564-9ab7-0820c2fe7839",
+                        "x": 83,
+                        "y": 176,
+                        "width": 252,
+                        "height": 231,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "b5851639-feb1-46ab-98e3-1f47df2de117",
+                        "x": 87,
+                        "y": 479,
+                        "width": 244,
+                        "height": 87,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "aa726fcf-e360-4171-ac97-c83c8dc30b7b",
+                        "x": 104,
+                        "y": 641,
+                        "width": 209,
+                        "height": 141,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "44dc1400-7702-470a-b0fc-b14ae1afdb42",
+                        "x": 410,
+                        "y": 556,
+                        "width": 187,
+                        "height": 87,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "f366bc6a-2770-44e0-bd6b-e3a7c9c793d7",
+                        "x": 403,
+                        "y": 720,
+                        "width": 200,
+                        "height": 69,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "8e13549b-5e74-417d-88c1-fe898afec854",
+                        "x": 416,
+                        "y": 239,
+                        "width": 196,
+                        "height": 69,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "1203c95e-9089-4275-922a-e473e9783bd5",
+                        "x": 401,
+                        "y": 375,
+                        "width": 227,
+                        "height": 123,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 43,
+                        "y": 136,
+                        "GUID": "0fbcf883-1135-49ec-bb8d-b6da4cfa4b3f"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
