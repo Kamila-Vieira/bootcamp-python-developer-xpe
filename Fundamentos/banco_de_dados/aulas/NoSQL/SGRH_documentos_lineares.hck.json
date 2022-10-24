@@ -1,0 +1,315 @@
+{
+    "modelName": "SGRH_documentos",
+    "collections": [
+        {
+            "collectionName": "empregados",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "f28c94a3-1799-4e23-b441-eed483349b28",
+                    "error": {}
+                },
+                {
+                    "name": "primeiro_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "12b4f6d6-5ba7-48d1-8c66-99f84f775a91",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "ultimo_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "229cfb71-8731-4d6e-84d2-7ad16f74ea48",
+                    "error": {}
+                },
+                {
+                    "name": "email",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "e9b4495f-d749-4419-8a53-9ca6a20b9fa6",
+                    "maxLength": 50,
+                    "error": {}
+                },
+                {
+                    "name": "data_admissao",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "d2a54ca3-09c6-45d3-952e-1ba6f43ea55a",
+                    "error": {}
+                },
+                {
+                    "name": "salario",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "84db5751-1048-4b3d-841e-e6cc07b02460",
+                    "error": {}
+                },
+                {
+                    "name": "departamento_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "cb8ebce5-8317-4f2f-9eaa-675dd8e2be29",
+                    "error": {}
+                },
+                {
+                    "name": "cargo_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "8345483e-c011-4a40-9043-86d0af170f50",
+                    "error": {}
+                },
+                {
+                    "name": "endereco",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "34acb294-9fd4-463d-9c69-c9828659d0fc",
+                    "error": {}
+                },
+                {
+                    "name": "cidade",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "d27e078f-4867-4907-9e1b-ee3e280cc32b",
+                    "error": {}
+                },
+                {
+                    "name": "estado",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "53106ae1-cc6d-4ab1-8417-c58a0e62b16c",
+                    "error": {}
+                },
+                {
+                    "name": "pais_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "2d453542-5bb7-4806-ba1a-314b7f1835e8",
+                    "error": {}
+                },
+                {
+                    "name": "regiao_nome",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "68fd56db-6ac2-4de1-a6fa-07c1f969370f",
+                    "error": {}
+                },
+                {
+                    "name": "cargo_historico",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "document",
+                            "properties": [
+                                {
+                                    "name": "cargo_nome",
+                                    "hackoladeMeta": {},
+                                    "isActivated": true,
+                                    "type": "string",
+                                    "GUID": "53ef838c-41c1-484b-b820-6ed4f2d9aaef",
+                                    "error": {}
+                                },
+                                {
+                                    "name": "data_inicio",
+                                    "hackoladeMeta": {},
+                                    "isActivated": true,
+                                    "type": "date",
+                                    "primaryKey": false,
+                                    "GUID": "3ff80a8d-9598-4b78-9483-e7d961bd89ad",
+                                    "error": {}
+                                },
+                                {
+                                    "name": "data_fim",
+                                    "hackoladeMeta": {},
+                                    "isActivated": true,
+                                    "type": "date",
+                                    "primaryKey": false,
+                                    "GUID": "839a4e98-8642-4b5a-89f8-3533800f784d",
+                                    "error": {}
+                                }
+                            ],
+                            "additionalProperties": false,
+                            "GUID": "abbae561-96c8-4e64-aff0-a53667d6f1b6",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "displayName": "cargo",
+                            "error": {}
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "2774f75b-8893-4010-a87a-95486c248b71",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e42c8029-4af2-466d-9af5-3b143cc50018"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "be1601df-5efa-4807-8608-283e850ee929",
+            "bucketId": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "recursos_humanos",
+            "type": "bucket",
+            "collectionIds": [
+                "be1601df-5efa-4807-8608-283e850ee929"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "deb71914-0c38-43c3-8016-c11d2e06531e": "recursos_humanos",
+        "be1601df-5efa-4807-8608-283e850ee929": "empregados",
+        "f28c94a3-1799-4e23-b441-eed483349b28": "_id",
+        "12b4f6d6-5ba7-48d1-8c66-99f84f775a91": "primeiro_nome",
+        "229cfb71-8731-4d6e-84d2-7ad16f74ea48": "ultimo_nome",
+        "e9b4495f-d749-4419-8a53-9ca6a20b9fa6": "email",
+        "d2a54ca3-09c6-45d3-952e-1ba6f43ea55a": "data_admissao",
+        "84db5751-1048-4b3d-841e-e6cc07b02460": "salario",
+        "cb8ebce5-8317-4f2f-9eaa-675dd8e2be29": "departamento_nome",
+        "8345483e-c011-4a40-9043-86d0af170f50": "cargo_nome",
+        "d27e078f-4867-4907-9e1b-ee3e280cc32b": "cidade",
+        "2d453542-5bb7-4806-ba1a-314b7f1835e8": "pais_nome",
+        "68fd56db-6ac2-4de1-a6fa-07c1f969370f": "regiao_nome",
+        "53106ae1-cc6d-4ab1-8417-c58a0e62b16c": "estado",
+        "34acb294-9fd4-463d-9c69-c9828659d0fc": "endereco",
+        "2774f75b-8893-4010-a87a-95486c248b71": "cargo_historico",
+        "53ef838c-41c1-484b-b820-6ed4f2d9aaef": "cargo_nome",
+        "3ff80a8d-9598-4b78-9483-e7d961bd89ad": "data_inicio",
+        "839a4e98-8642-4b5a-89f8-3533800f784d": "data_fim"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "e41327a0-6696-4f81-a78f-f399a17ec582"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "ce8d774d-09f6-444b-915e-387a76fac91a"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "94066c03-431b-4c3c-ad92-0719b448dfd9"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v5.0",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2022-10-22T01:53:44.313Z",
+    "GUID": "cf2f026b-e753-4f12-b9a0-e2cb9a98b1d3",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "lastModifTS": "2022-10-22T02:15:30.309Z",
+    "persistenceSchemaVersion": "6",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "6.6.0"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "be1601df-5efa-4807-8608-283e850ee929",
+                        "x": 219,
+                        "y": 170,
+                        "width": 269,
+                        "height": 357,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 179,
+                        "y": 130,
+                        "GUID": "deb71914-0c38-43c3-8016-c11d2e06531e"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

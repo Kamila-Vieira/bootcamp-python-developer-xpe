@@ -1,0 +1,578 @@
+{
+    "modelName": "SGRH_documentos",
+    "collections": [
+        {
+            "collectionName": "vendas",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "beae3906-bbc7-40a3-937b-c9dd0498ae3c",
+                    "primaryKey": true,
+                    "error": {}
+                },
+                {
+                    "name": "valor",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "b9710564-27bc-49ee-91c9-83f7c0c202ed",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "nota_fiscal",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "b353bdf2-03cc-423b-95f3-c8f05adb6b6a",
+                    "error": {}
+                },
+                {
+                    "name": "produto",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "name": "itens",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "array",
+                            "properties": [
+                                {
+                                    "hackoladeMeta": {},
+                                    "isActivated": true,
+                                    "type": "document",
+                                    "properties": [
+                                        {
+                                            "name": "nome",
+                                            "hackoladeMeta": {},
+                                            "isActivated": true,
+                                            "type": "string",
+                                            "GUID": "c630b247-d5e4-455c-a73c-ba52f87dc4f4",
+                                            "error": {}
+                                        },
+                                        {
+                                            "name": "valor",
+                                            "hackoladeMeta": {},
+                                            "isActivated": true,
+                                            "type": "numeric",
+                                            "GUID": "4538702b-1595-4630-8a62-5e0879ae8b9e",
+                                            "error": {}
+                                        }
+                                    ],
+                                    "additionalProperties": false,
+                                    "GUID": "b724508b-c61b-427c-93fc-bdd90cb77d9d",
+                                    "arrayItem": true,
+                                    "arrayParentType": "array",
+                                    "error": {},
+                                    "displayName": "item_produto"
+                                }
+                            ],
+                            "additionalItems": true,
+                            "GUID": "a325c23f-5860-4094-88b6-023db77fa7c0",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "13625260-fc43-4c09-8136-98020369a130",
+                    "error": {}
+                },
+                {
+                    "name": "vendedor",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "8bf7adf8-13f7-4fcc-a8b8-6e7e3f088412",
+                    "foreignCollection": "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                    "foreignField": [
+                        "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                        "21fd430e-1d27-4d8b-953e-2c098f608160"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c0a56bb9-46b5-4aab-a3a4-634c0a2bcc0f",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "afa79627-71c7-4fb6-916f-6b56d9dc3138"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "9531920b-6f67-427c-85db-23ddda3f6b6a",
+            "bucketId": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        },
+        {
+            "collectionName": "pessoas",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "7a0c19f2-5e51-4ff8-8d16-a5e98d2a3661",
+                    "primaryKey": true,
+                    "error": {}
+                },
+                {
+                    "name": "cpf",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "21fd430e-1d27-4d8b-953e-2c098f608160",
+                    "required": true,
+                    "error": {},
+                    "childRelationships": [
+                        "c0a56bb9-46b5-4aab-a3a4-634c0a2bcc0f",
+                        "5b0aa0d6-6a44-4819-ba94-977e26236141"
+                    ]
+                },
+                {
+                    "name": "email",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "146f2119-d375-4b69-9d6f-035790755a05",
+                    "error": {}
+                },
+                {
+                    "name": "endereco",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "name": "logradouro",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "8eb9dda2-9c61-402d-ad8e-9cb38f8f9716",
+                            "error": {}
+                        },
+                        {
+                            "name": "numero",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "01b1c633-d4e6-4d63-8885-48a8b93e2897",
+                            "error": {}
+                        },
+                        {
+                            "name": "complemento",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "2c9a593b-7b1e-46f4-8ee5-e7e02c8e300d",
+                            "error": {}
+                        },
+                        {
+                            "name": "bairro",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "0318deb6-d8a0-4c49-b647-ae4032365ef4",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "b42fd578-7c4d-41c1-b32b-57bb4bdb43d9",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "b0f4f263-a46c-4294-abfe-0b295638bc21"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+            "bucketId": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        },
+        {
+            "collectionName": "compras",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "06055eb9-44c2-480c-a9ff-bbad03b2cc70",
+                    "required": false,
+                    "primaryKey": true,
+                    "error": {}
+                },
+                {
+                    "name": "data",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "1ddcf8f3-b281-4dde-bb64-e70ad07278a0",
+                    "error": {}
+                },
+                {
+                    "name": "valor",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "98f85f00-a738-4585-8634-03f208574229",
+                    "error": {}
+                },
+                {
+                    "name": "nota_fiscal",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "38c2d87a-8ee0-4f0c-a3f9-55989059b24f",
+                    "error": {}
+                },
+                {
+                    "name": "comprador",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "b07a303e-fd06-462e-9a3c-c16668df3aff",
+                    "foreignCollection": "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                    "foreignField": [
+                        "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                        "21fd430e-1d27-4d8b-953e-2c098f608160"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "5b0aa0d6-6a44-4819-ba94-977e26236141",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "2b4c3b87-fe6b-4e92-a857-91edf39b3260"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "ee04dee4-44b1-496e-9eac-df880f8a9b5f",
+            "bucketId": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        },
+        {
+            "collectionName": "marketing",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "a16dd238-4b51-4ffc-87cc-a4a76574faf1",
+                    "primaryKey": true,
+                    "error": {}
+                },
+                {
+                    "name": "campanha",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "46cb6c50-1416-489c-a48a-ae7497875940",
+                    "error": {}
+                },
+                {
+                    "name": "data",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "0dd5bf26-127e-4fe9-aa2f-c0b98ffcee2c",
+                    "error": {}
+                },
+                {
+                    "name": "produtos",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "d42fb381-b453-48dd-9945-452537601b18",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "displayName": "nome_produto",
+                            "error": {}
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "fb916c03-c91b-4ba0-b6f2-7bf177e11e04",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "2f31fa9a-d062-4a12-8ec0-0fb783007389"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c3a549fa-0936-4cb2-84b4-980d6fa25746",
+            "bucketId": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "operacoes",
+            "type": "bucket",
+            "collectionIds": [
+                "9531920b-6f67-427c-85db-23ddda3f6b6a",
+                "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                "ee04dee4-44b1-496e-9eac-df880f8a9b5f",
+                "c3a549fa-0936-4cb2-84b4-980d6fa25746"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "deb71914-0c38-43c3-8016-c11d2e06531e"
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk vendas.vendedor to pessoas._id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                    "21fd430e-1d27-4d8b-953e-2c098f608160"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "9531920b-6f67-427c-85db-23ddda3f6b6a",
+                    "8bf7adf8-13f7-4fcc-a8b8-6e7e3f088412"
+                ]
+            ],
+            "childCardinality": "n",
+            "GUID": "c0a56bb9-46b5-4aab-a3a4-634c0a2bcc0f",
+            "parentCollection": "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+            "childCollection": "9531920b-6f67-427c-85db-23ddda3f6b6a"
+        },
+        {
+            "name": "fk compras.comprador to pessoas.cpf",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                    "21fd430e-1d27-4d8b-953e-2c098f608160"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ee04dee4-44b1-496e-9eac-df880f8a9b5f",
+                    "b07a303e-fd06-462e-9a3c-c16668df3aff"
+                ]
+            ],
+            "childCardinality": "n",
+            "GUID": "5b0aa0d6-6a44-4819-ba94-977e26236141",
+            "parentCollection": "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+            "childCollection": "ee04dee4-44b1-496e-9eac-df880f8a9b5f"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "deb71914-0c38-43c3-8016-c11d2e06531e": "operacoes",
+        "9531920b-6f67-427c-85db-23ddda3f6b6a": "vendas",
+        "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c": "pessoas",
+        "ee04dee4-44b1-496e-9eac-df880f8a9b5f": "compras",
+        "c3a549fa-0936-4cb2-84b4-980d6fa25746": "marketing",
+        "beae3906-bbc7-40a3-937b-c9dd0498ae3c": "_id",
+        "b9710564-27bc-49ee-91c9-83f7c0c202ed": "valor",
+        "b353bdf2-03cc-423b-95f3-c8f05adb6b6a": "nota_fiscal",
+        "13625260-fc43-4c09-8136-98020369a130": "produto",
+        "7a0c19f2-5e51-4ff8-8d16-a5e98d2a3661": "_id",
+        "21fd430e-1d27-4d8b-953e-2c098f608160": "cpf",
+        "146f2119-d375-4b69-9d6f-035790755a05": "email",
+        "b42fd578-7c4d-41c1-b32b-57bb4bdb43d9": "endereco",
+        "06055eb9-44c2-480c-a9ff-bbad03b2cc70": "_id",
+        "1ddcf8f3-b281-4dde-bb64-e70ad07278a0": "data",
+        "98f85f00-a738-4585-8634-03f208574229": "valor",
+        "38c2d87a-8ee0-4f0c-a3f9-55989059b24f": "nota_fiscal",
+        "a16dd238-4b51-4ffc-87cc-a4a76574faf1": "_id",
+        "46cb6c50-1416-489c-a48a-ae7497875940": "campanha",
+        "0dd5bf26-127e-4fe9-aa2f-c0b98ffcee2c": "data",
+        "fb916c03-c91b-4ba0-b6f2-7bf177e11e04": "produtos",
+        "8bf7adf8-13f7-4fcc-a8b8-6e7e3f088412": "vendedor",
+        "c0a56bb9-46b5-4aab-a3a4-634c0a2bcc0f": "fk vendas.vendedor to pessoas._id",
+        "b07a303e-fd06-462e-9a3c-c16668df3aff": "comprador",
+        "5b0aa0d6-6a44-4819-ba94-977e26236141": "fk compras.comprador to pessoas.cpf",
+        "8eb9dda2-9c61-402d-ad8e-9cb38f8f9716": "logradouro",
+        "01b1c633-d4e6-4d63-8885-48a8b93e2897": "numero",
+        "2c9a593b-7b1e-46f4-8ee5-e7e02c8e300d": "complemento",
+        "0318deb6-d8a0-4c49-b647-ae4032365ef4": "bairro",
+        "a325c23f-5860-4094-88b6-023db77fa7c0": "itens",
+        "c630b247-d5e4-455c-a73c-ba52f87dc4f4": "nome",
+        "4538702b-1595-4630-8a62-5e0879ae8b9e": "valor"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "e41327a0-6696-4f81-a78f-f399a17ec582"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "ce8d774d-09f6-444b-915e-387a76fac91a"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "94066c03-431b-4c3c-ad92-0719b448dfd9"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v5.0",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2022-10-22T01:53:44.313Z",
+    "GUID": "6b6af899-a9ee-482e-8be6-490fe5555897",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "lastModifTS": "2022-10-22T02:40:10.087Z",
+    "persistenceSchemaVersion": "6",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "6.6.0"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "9531920b-6f67-427c-85db-23ddda3f6b6a",
+                        "x": 276,
+                        "y": 197,
+                        "width": 276,
+                        "height": 195,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "9f4e6ad7-107c-4102-9200-2ef5d6c3e20c",
+                        "x": 294,
+                        "y": 420,
+                        "width": 241,
+                        "height": 177,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "ee04dee4-44b1-496e-9eac-df880f8a9b5f",
+                        "x": 316,
+                        "y": 634,
+                        "width": 190,
+                        "height": 123,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c3a549fa-0936-4cb2-84b4-980d6fa25746",
+                        "x": 624,
+                        "y": 459,
+                        "width": 245,
+                        "height": 124,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 236,
+                        "y": 157,
+                        "GUID": "deb71914-0c38-43c3-8016-c11d2e06531e"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
