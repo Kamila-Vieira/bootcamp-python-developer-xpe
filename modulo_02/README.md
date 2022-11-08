@@ -6,7 +6,7 @@ Todos os códigos foram desenvolvidos dentro do [Google Colab](https://colab.res
 
 **Ciclo de um trabalho de análise de dados**
 
-<img src="/ciclo_analise_de_dados.png" alt="ciclo analise de dados" width="50%"/>
+<img src="./ciclo_analise_de_dados.png" alt="ciclo analise de dados" width="50%"/>
 
 **Definição do problema:**
   - Qual é a dor? 
