@@ -2,38 +2,80 @@
 
 Todos os códigos foram desenvolvidos dentro do [Google Colab](https://colab.research.google.com/)
 
-### Introdução à análise de dados
 
-**Ciclo de um trabalho de análise de dados**
+### Plano de ensino Módulo 2: Python para a Análise de Dados
 
-<img src="./ciclo_analise_de_dados.png" alt="ciclo analise de dados" width="50%"/>
+#### Capítulo 1. Introdução à análise de dados
 
-**Definição do problema:**
-  - Qual é a dor? 
-  - Quais são os problemas que serão abordados?
-  - Qual processo não está bom e deve ser melhorados?
-  - Onde será feito o escopo da análise.
-  
-**Coleta de dados:**
-  - Define se será possível ou não fazer a análise, verificando se existe ou não os dados para responder ás questões do problema;
-  - Saber lidar com diferentes fontes de dados: dado tabular, arquivo csv, arquivo excel, base de dados SQL ou NoSQL.
+1.1 Apresentação da disciplina
+
+1.2 Introdução à análise de dados
+
  
-**Tratamento dos dados:**
-  - Limpeza dos dados;
-  - Verificar os dados que não serão necessários para a análise;
-  - Geração do dataset: Conjunto de dados minimamente usável no qual é possível extrair alguma informação e fazer a análise. 
+#### Capítulo 2. Numpy para a análise de dados
+
+2.1 Introdução aos arrays
+
+2.2 Criação de arrays - Prática
+
+2.3 Indexação de arrays
+
+2.4 Indexação de arrays - Prática
+
+2.5 Operações aritméticas
+
+2.6 Operações aritméticas: soma, subtração e divisão  - Prática
+
+2.7 Operações aritméticas: multiplicação element wise e matricial  - Prática
+
+2.8 Comparações e Indexação booleana
+
+2.9 Comparações e Indexação booleana - Prática
+
+2.10 Outras operações úteis em numpy - Prática
+
+2.11 Regressão linear no numpy: conceitos básicos
+
+2.12 Regressão linear no numpy - Prática
+
+
+#### Capítulo 3. Pandas para a análise de dados
+
+3.1 Introdução ao pandas
+
+3.2 Introdução ao pandas - Prática
+
+3.3 Indexação
+
+3.4 Indexação - Prática
+
+3.5 Indexação booleana - Prática
+
+3.6 Ordenação no Pandas
+
+3.7 Ordenação no Pandas − Prática
+
+3.8 Visualização de dados no pandas − Prática
+
+3.9 Dicas gerais sobre o Pandas − Prática
+
+
+#### Trabalho Prático do Módulo 1
+
  
-**Análise de dados:**
-  - Interpretação dos resultados;
-  - Execução de códigos e criação de gráficos;
-  - Verificar se os dados coletados respondem às questões do problema;
-  - Necessário a interação de todas as pessoas que têm conhecimento sobre o problema.
-  
-**Visualização:**
-  - Interpretação dos resultados;
-  - Geração de todas as visualizações possíveis com tudo o que é interessante para a interpretação dos dados para agregar conhecimentos para a tomada de decisão e responder possivelmente às questões do problema;
-  - Uso de muitas ferramentas visuais: Dashboards; relatórios; painéis;
-  - Apresentação de Story telling: Forma como conta a história, apresenta os dados da análise que foram descobertos ao longo do processo.
-  
-**O ciclo se repete porque as vezes não foram respondidas todas ou nenhuma questão do problema**
-  
+#### Capítulo 4. Introdução ao aprendizado de máquinas
+
+4.1 Introdução ao aprendizado de máquinas
+
+4.2 Introdução ao scikit-learn
+
+4.3 Classificação: conceitos básicos
+
+4,4 Classificação no scikit-learn - Prática
+
+4.5 Regressão linear no scikit-learn I - Prática
+
+4.6 Regressão linear no scikit-learn II - Prática
+
+
+#### Desafio do Módulo 1
