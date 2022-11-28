@@ -110,3 +110,13 @@ Obs.: É possível adicionar um novo pacote no arquivo requirements.txt e rodar 
 6.3. Criação de páginas dinâmicas
 
 #### Atividade Prática
+
+#### Capítulo 7. Flask
+
+7.1. Preparação do ambiente
+
+7.2. Criação e configuração do primeiro projeto em Flask
+
+7.3. Criação de templates 
+
+7.4. Flask
