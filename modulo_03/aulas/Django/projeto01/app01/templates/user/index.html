@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+<!-- Injeta este arquivo no arquivo base.html -->
+{% block content %}<!--  -->
+<h1>Index User</h1>
+{% if nome %}
+<div class="col-sm-10">Seu nome é {{ nome }}</div>
+{% endif %}<!--  -->
+{% if id %}
+<div class="col-sm-10">Seu id é {{ id }}</div>
+{% endif %}<!--  -->
+
+{% endblock %}
