@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+<!--  -->
+{% block content %}
+
+<div class="row">
+  <p class="col-sm-6 text-center my-3">Digite os coeficientes da equação de 2º grau</p>
+</div>
+
+<form method="POST" autocomplete="off">
+  {% csrf_token %}
+  <!--  -->
+
+  {% for field in form %}
+  <!--  -->
+  {% if field.label != 'Resultado' %}
+  <div class="form-group row mb-3">
+    <label for="{{ field.id_for_label }}" class="col-sm-1 col-form-label">
+      {{ field.label }}
+    </label>
+    <div class="col-sm-4">{{ field }}</div>
+  </div>
+
+  {% if field.errors %}
+  <!--  -->
+  {% for error in field.errors %}<!--  -->
+  <div class="offset-sm-2 col-sm-10">
+    <span class="badge badge-pill badge-danger">{{ error }}</span>
+  </div>
+  {% endfor %}<!--  -->
+  {% endif %}<!--  -->
+  {% endif %}<!--  -->
+  {% endfor %}<!--  -->
+
+  <div class="row">
+    <button class="col-sm-6 btn btn-primary btn-block" type="submit" name="acao" value="calcular">
+      Calcular
+    </button>
+  </div>
+  {% if result %}
+  <div class="row mt-3">{{ result }}</div>
+  {% endif %}
+</form>
+
+{% endblock %}
