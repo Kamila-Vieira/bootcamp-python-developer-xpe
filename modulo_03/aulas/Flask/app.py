@@ -1,12 +1,13 @@
-import os
 from flask import Flask, render_template
 from form import NameForm 
+from flask_migrate import Migrate
+from models.User import db
 
-template_dir = os.path.abspath('./templates')
+app = Flask(__name__) 
+app.config.from_object('config')
 
-app = Flask(__name__, template_folder=template_dir)
-
-app.config['SECRET_KEY'] = 'AFASFAOJkkljfasf~ç3219-0fm'
+db.init_app(app)
+migrate = Migrate(app, db)
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():

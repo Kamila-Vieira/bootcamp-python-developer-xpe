@@ -152,3 +152,107 @@
       
     return render_template('index.html', name = name, form = form)
 ````
+
+## ORMs do flask
+
+### Aula 1 => Models no Flask
+
+**1. Criar arquivo ``config.py`` e adicionar as configurações:**
+  
+````sh
+  touch config.py
+````  
+  
+````py
+  import os
+
+  SECRET_KEY = os.urandom(32)
+
+  basedir =  os.path.abspath(os.path.dirname(__file__))
+
+  DEBUG = True
+
+  SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.db')
+
+  SQLALCHEMY_TRACK_MODIFICATIONS = True
+````
+  
+**2. Criar pasta models com o arquivo ``User.py``:**
+
+````sh
+  mkdir models && cd models && touch User.py && cd ..
+````
+
+**3. Instalar Flask-Migrate (migrações), flask-sqlalchemy (orm) e atualizar dependências:**
+
+````sh
+  pip install Flask-Migrate
+  pip install flask-sqlalchemy
+  pip freeze > requirements.txt
+````
+
+**4. Criar model User no arquivo ``User.py``:**
+
+````py
+  from flask_sqlalchemy import SQLAlchemy
+
+  db = SQLAlchemy()
+
+  class User(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(30))
+    age = db.Column(db.String(30))
+    address = db.Column(db.String(120))
+    
+    def serialize(self):
+      return {
+        'id': self.id,
+        'name': self.name,
+        'age': self.age,
+        'address': self.address,
+      }
+````
+
+**5. Atualizar arquivo ``app.py``:**
+  
+````py
+  from flask import Flask, render_template
+  from form import NameForm 
+  from flask_migrate import Migrate
+  from models.User import db
+
+  app = Flask(__name__) 
+
+  app.config.from_object('config')
+
+  db.init_app(app)
+
+  migrate = Migrate(app, db)
+    
+  ...
+````
+
+### Aula 2 => Migrations no Flask
+
+**1. Inicializar banco de dados:**
+
+````sh
+  flask db init
+````
+
+**2. Fazer a primeira migrate do banco de dados (subir os models existentes):**
+
+````sh
+  flask db migrate
+````
+
+**3. Aplicar as migrations no banco de dados:**
+
+````sh
+  flask db upgrade
+````
+
+### Aula 3 => Tabelas no Flask
+
+**1. Baixar [dbeaver](https://dbeaver.io/download/) para visualizar as tabelas do banco de dados (migrações, users)**

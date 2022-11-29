@@ -120,3 +120,11 @@ Obs.: É possível adicionar um novo pacote no arquivo requirements.txt e rodar 
 7.3. Criação de templates 
 
 7.4. Flask
+
+#### Capítulo 8. ORMs do flask
+
+8.1. Models
+
+8.2. Migrations
+
+8.3. Tabelas
