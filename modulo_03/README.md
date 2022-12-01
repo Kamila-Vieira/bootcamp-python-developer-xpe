@@ -128,3 +128,15 @@ Obs.: É possível adicionar um novo pacote no arquivo requirements.txt e rodar 
 8.2. Migrations
 
 8.3. Tabelas
+
+#### Capítulo 9. CRUD com Django
+
+9.1. Introdução ao CRUD
+
+9.2. Criação de Models e formulários
+
+9.3. Rotas de criação e leitura
+
+9.4. Rota de atualização
+
+9.5. Rota de deleção
