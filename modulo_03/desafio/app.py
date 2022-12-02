@@ -1,23 +1,18 @@
 from flask import Flask, render_template
-from form import NameForm 
 from flask_migrate import Migrate
-from models.User import db
+from models.User import db,User
+from routes.user import user_bp
 
 app = Flask(__name__) 
-
 app.config.from_object('config')
 
 db.init_app(app)
-
 migrate = Migrate(app, db)
 
-@app.route('/', methods = ['GET', 'POST'])
+app.register_blueprint(user_bp, url_prefix="/users")
+
+@app.route('/')
 def index():
-  name = None
-  form = NameForm()
-  
-  if form.validate_on_submit():
-    name = form.name.data
-    form.name.data = ''
-    
-  return render_template('index.html', name = name, form = form)
+  session = db.session()
+  users = session.query(User).all()
+  return render_template('index.html', users=users)

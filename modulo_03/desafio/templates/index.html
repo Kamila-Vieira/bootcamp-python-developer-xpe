@@ -8,16 +8,16 @@
   <body>
     {% block content %}
     <!--  -->
-    {% if name %}
-    <h1>Olá, {{ name }}</h1>
+    {% if users %}
+    <!--  -->
+    {% for user in users %}
+    <h1>Nome: {{ user.name }}</h1>
+    {% endfor %}
+    <!--  -->
+    {% else %}
+    <h1>Não há usuários disponíveis</h1>
     {% endif %}
-
-    <form method="POST">
-      {{form.hidden_tag()}}<!--  -->
-      {{form.name.label}} {{form.name}}<!--  -->
-      {{form.submit}}
-    </form>
-
+    <!--  -->
     {% endblock %}
   </body>
 </html>
