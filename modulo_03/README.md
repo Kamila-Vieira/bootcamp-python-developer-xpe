@@ -140,3 +140,15 @@ Obs.: É possível adicionar um novo pacote no arquivo requirements.txt e rodar 
 9.4. Rota de atualização
 
 9.5. Rota de deleção
+
+#### Capítulo 10. CRUD com Flask
+
+10.1. Configuração de rotas CRUD e MVC
+
+10.2. Rotas de listagem e criação
+
+10.3. Rotas de leitura de usuário
+
+10.4. Rota de atualização
+
+10.5. Rota de deleção
