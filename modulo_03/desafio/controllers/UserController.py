@@ -51,17 +51,6 @@ def update(user_id):
   finally:
     session.close()
   
-def show(user_id):
-  session = db.session()
-  try:
-    user = session.query(User).get(user_id)
-    return Response(json.dumps([user.serialize()]))
-  except Exception as e:
-    session.rollback()
-    return {"Error": "Não foi possível encontrar o usuário!"}
-  finally:
-    session.close()
-    
 def destroy(user_id):
   session = db.session()
   try:
