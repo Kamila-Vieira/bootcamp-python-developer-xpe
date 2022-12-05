@@ -152,3 +152,23 @@ Obs.: É possível adicionar um novo pacote no arquivo requirements.txt e rodar 
 10.4. Rota de atualização
 
 10.5. Rota de deleção
+
+#### Capítulo 11. Introdução ao teste de software
+
+11.1. Introdução à testes de software
+
+11.2. Aplicação de testes unitários em Python
+
+11.3. Aplicação de testes em CRUD no Flask
+
+#### Capítulo 12. Testando projetos
+
+12.1. Introdução à testes no Django
+
+12.2. Testes em models no Django
+
+12.3. Testes em forms no Django
+
+12.4. Testes em views no Django
+
+#### Desafio

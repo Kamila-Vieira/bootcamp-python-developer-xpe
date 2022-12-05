@@ -6,4 +6,4 @@ class User(models.Model):
   email = models.CharField('email', max_length=30)
   
   def __str__(self):
-    return self.nome
+    return f"Nome: {self.nome}, Telefone: {self.telefone}, Email: {self.email}"
