@@ -14,7 +14,21 @@
 
 2.1. Aula Prática Regressão Linear
 
-####
+#### Capítulo 3. Aula Prática Regressão Logística
+
+3.1. Aula Prática Regressão Logística
+
+#### Capítulo 4. Máquinas de Vetores de Suporte
+
+4.1. Aula Teórica SVM
+
+4.2. Aula Prática SVM
+
+#### Capítulo 5. Árvore de Decisão
+
+5.1. Árvore de Decisão - Teórica
+
+5.2. Árvore de Decisão - Prática
 
 #### Trabalho Prático
 
