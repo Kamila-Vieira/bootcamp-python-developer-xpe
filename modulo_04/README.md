@@ -50,8 +50,30 @@
 
 7.2. Async
 
-#### Capítulo 8. Programação Concorrente
+#### Capítulo 8. Threads - Paralelismo e Concorrência
 
-8.1. Programação Concorrente - Aula Teórica
+8.1. Paralelismo e Concorrência - Aula Teórica
+
+8.2. Paralelismo e Concorrência - Aula Prática 
+
+#### Capítulo 9. Programação Reativa
+
+9.1 - Programação Reativa - Aula Teórica
+
+9.2 - Programação Reativa - Aula Prática I
+
+9.3 - Programação Reativa - Aula Prática II
+
+#### Capítulo 10. Pygame
+
+10.1 - Pygame I
+
+10.2 - Pygame II
+
+10.3 - Pygame III
+
+10.4 - Pygame IV
+
+10.5 - Pygame V
 
 #### Desafio
