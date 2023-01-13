@@ -9,17 +9,51 @@ import pygame
 
 pygame.init()
 
-window = pygame.display.set_mode([1132, 768])
+width_player = 104
+height_player = 226
+
+width_ball = 50
+height_ball = 50
+
+width_field = 1132
+height_field = 768
+
+window = pygame.display.set_mode([width_field, height_field])
 window_title = pygame.display.set_caption('Fute IGTI')
 
-field = pygame.image.load('assets/field.png') # largura = 1132 / altura = 768
-player1 = pygame.image.load('assets/player1.png') # largura = 104 / altura = 226
-player2 = pygame.image.load('assets/player2.png') # largura = 104 / altura = 226
-ball = pygame.image.load('assets/ball.png') # largura = 50 / altura = 50
+field = pygame.image.load('assets/field.png')
+player1 = pygame.image.load('assets/player1.png')
+player2 = pygame.image.load('assets/player2.png')
+ball = pygame.image.load('assets/ball.png')
 
-ball_x = 541 # ponto inicial X => (larguraF-larguraB)/2
-ball_y = 344 # ponto inicial Y => ((alturaF/2) - larguraB) + 10
+ball_x = (width_field - width_ball)/2
+ball_y = ((height_field/2) - width_ball) + 10
+player1_y = (height_field/2) - width_player
+player2_y = (height_field/2) - width_player
 
+player_moveup = False
+player_movedown = False
+
+def move_player():
+    global player1_y
+    max_down = height_field - height_player
+    
+    if player_moveup:
+        player1_y -= 5
+    else:
+        player1_y += 0
+        
+    if player_movedown:
+        player1_y += 5
+    else:
+        player1_y += 0
+        
+    if player1_y <= 0:
+        player1_y = 0
+    elif player1_y >= max_down:
+        player1_y = max_down
+
+ 
 def move_ball():
     global ball_x
     global ball_y
@@ -28,18 +62,29 @@ def move_ball():
 
 def drawn():
     window.blit(field, (0, 0))
-    window.blit(player1, (104, 280)) # (larguraP1, (alturaF/2) - larguraP1)
-    window.blit(player2, (924, 280)) # (larguraF - (2*larguraP2), (alturaF/2) - larguraP2)
+    window.blit(player1, (width_player, player1_y))
+    window.blit(player2, (width_field - (2*width_player), player2_y))
     window.blit(ball, (ball_x, ball_y))
 
 loop = True
 
 while loop:
     
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+    for events in pygame.event.get():
+        if events.type == pygame.QUIT:
             loop = False
+        if events.type == pygame.KEYDOWN:
+            if events.key == pygame.K_w:
+                player_moveup = True
+            if events.key == pygame.K_s:
+                player_movedown = True
+        if events.type == pygame.KEYUP:
+            if events.key == pygame.K_w:
+                player_moveup = False
+            if events.key == pygame.K_s:
+                player_movedown = False
             
     drawn()
-    move_ball()
+   #move_ball()
+    move_player()
     pygame.display.update()
