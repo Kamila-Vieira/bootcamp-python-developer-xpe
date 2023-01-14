@@ -25,6 +25,9 @@ field = pygame.image.load('assets/field.png')
 player1 = pygame.image.load('assets/player1.png')
 player2 = pygame.image.load('assets/player2.png')
 ball = pygame.image.load('assets/ball.png')
+win = pygame.image.load('assets/winner.png')
+lose = pygame.image.load('assets/loser.png')
+
 
 ball_x = (width_field - width_ball)/2
 ball_y = ((height_field/2) - width_ball) + 10
@@ -36,8 +39,13 @@ player1_movedown = False
 player2_moveup = False
 player2_movedown = False
 
-ball_dir_x = -3
-ball_dir_y = 1
+score_player1 = 0
+score_player2 = 0
+score_font = pygame.font.SysFont('comicsans', 30)
+score_text = score_font.render('Score: ' + str(score_player1) + ' / ' + str(score_player2), 1, "red")
+
+ball_dir_x = -7
+ball_dir_y = 7
 max_down = height_field - height_player
 
 def move_player1():
@@ -72,6 +80,9 @@ def move_ball():
     global ball_y
     global ball_dir_x
     global ball_dir_y
+    global score_player1
+    global score_player2
+    global score_text
     
     ball_x += ball_dir_x
     ball_y += ball_dir_y
@@ -91,12 +102,36 @@ def move_ball():
     elif ball_y <= 0:
         ball_dir_y *= -1
         
+    if ball_x < -width_ball:
+        ball_x = (width_field - width_ball)/2
+        ball_y = ((height_field/2) - width_ball) + 10
+        ball_dir_x *= -1
+        ball_dir_y *= -1
+        score_player2 += 1
+        score_text = score_font.render('Score: ' + str(score_player1) + ' / ' + str(score_player2), 1, "red")
+        
+    if ball_x > width_field + width_ball:
+        ball_x = (width_field - width_ball)/2
+        ball_y = ((height_field/2) - width_ball) + 10
+        ball_dir_x *= -1
+        ball_dir_y *= -1
+        score_player1 += 1
+        score_text = score_font.render('Score: ' + str(score_player1) + ' / ' + str(score_player2), 1, "red")
     
 def drawn():
-    window.blit(field, (0, 0))
-    window.blit(player1, (width_player, player1_y))
-    window.blit(player2, (width_field - (2*width_player), player2_y))
-    window.blit(ball, (ball_x, ball_y))
+    if score_player1 or score_player2 < 9:
+        window.blit(field, (0, 0))
+        window.blit(player1, (width_player, player1_y))
+        window.blit(player2, (width_field - (2*width_player), player2_y))
+        window.blit(ball, (ball_x, ball_y))
+        window.blit(score_text, ((width_field - score_text.get_width())/2, 0))
+        move_ball()
+        move_player1()
+        move_player2()
+    elif score_player1 >= 8:
+        window.blit(win, ((width_field - win.get_width())/2, (height_field - win.get_height())/2))
+    elif score_player2 >= 8:
+        window.blit(lose, ((width_field - lose.get_width())/2, (height_field - lose.get_height())/2))
 
 loop = True
 
@@ -117,7 +152,4 @@ while loop:
                 player1_movedown = False
             
     drawn()
-    move_ball()
-    move_player1()
-    move_player2()
     pygame.display.update()
